@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>{{ data ? 'Update Task' : 'Add Task' }}</h2>
+<mat-dialog-content [formGroup]="taskForm">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <input matInput formControlName="description">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>End Date</mat-label>
+    <input matInput [matDatepicker]="endDatePicker" formControlName="endDate">
+    <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #endDatePicker></mat-datepicker>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-button (click)="save()" [disabled]="!taskForm.valid">{{ data ? 'Update' : 'Add' }}</button>
+</mat-dialog-actions>

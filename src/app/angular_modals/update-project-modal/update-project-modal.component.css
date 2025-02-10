@@ -1,0 +1,17 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  margin-bottom: 10px; /* Adjust as needed */
+}
+/* Adjust the width of the input fields */
+.mat-form-field {
+  width: 100%; /* Set the width to 100% */
+}
+
+/* Optionally adjust the width of the button */
+button[type="submit"] {
+  width: 100%; /* Set the width to 100% */
+}

@@ -1,0 +1,161 @@
+/* Styles pour les widgets */
+@import url('https://fonts.googleapis.com/css?family=Inter:wght@300;400;500;6008 display=swap');
+.widget-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget {
+  width: 230px;
+  height: 175px;
+  background-color: #fff;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #939393;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.widget.green {
+  background: linear-gradient(to right, #ffecd2, #fcb69f) /* Green gradient */
+}
+
+.widget.yellow {
+  background: linear-gradient(to right, #a1ffce, #faffd1); /* Yellow gradient */
+}
+
+.widget.red {
+  background: linear-gradient(to right, #a8deb4, #595f64); /* Red gradient */
+}
+
+.widget.blue {
+  background: linear-gradient(to right, #808000, #9ACD32); /* Blue gradient */
+}
+
+/*.widget.green {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+.widget.yellow {
+  background: linear-gradient(to right, #a1ffce, #faffd1);
+}
+
+.widget.red {
+  background: linear-gradient(to right, #a8deb4, #595f64);
+}
+
+.widget.blue {
+  background: linear-gradient(to right, #808000, #9ACD32);
+
+}*/
+
+.widget .icon, .widget .top, .widget .bottom {
+  width: 100%;
+  text-align: center;
+}
+
+.widget .icon {
+  font-size: 60px;
+}
+
+.widget .top {
+  font-size: 30px;
+}
+
+.widget .bottom {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Règles média pour la réactivité sur petits écrans */
+@media (max-width: 768px) {
+  .widget {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .widget .icon {
+    font-size: 50px;
+  }
+
+  .widget .top,
+  .widget .bottom {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .widget .icon {
+    font-size: 40px;
+  }
+
+  .widget .top,
+  .widget .bottom {
+    font-size: 18px;
+  }
+}
+
+/* J'ai retiré le code pour .middle-section et .bottom-section pour la clarté. Assurez-vous que ces styles sont nécessaires avant de les enlever définitivement. */
+
+.middle-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @media only screen and (max-width: 1600px) {
+    width: 1280px;
+  }
+  @media only screen and (max-width: 1500px) {
+    width: 1180px;
+  }
+  @media only screen and (max-width: 1400px) {
+    width: 1080px;
+  }
+  @media only screen and (max-width: 1200px) {
+    width: 980px;
+  }
+  .widget {
+    height: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #939393;
+    &.left {
+      width: 50%;
+      @media only screen and (max-width: 1600px) {
+        width: 790px;
+      }
+      @media only screen and (max-width: 1500px) {
+        width: 690px;
+      }
+      @media only screen and (max-width: 1400px) {
+        width: 590px;
+      }
+      @media only screen and (max-width: 1200px) {
+        width: 490px;
+      }
+    }
+    &.right {
+      width: 50%;
+    }
+  }
+}
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  .widget {
+    width: 100%; /* Make the widget take up the full width */
+    height: 600px; /* Increase the height */
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #939393;
+  }
+}
+
+

@@ -1,0 +1,13 @@
+.chart-container {
+  padding: 20px;
+}
+
+.chart-title {
+  padding: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: #333333;
+  font-size: 18px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica,
+    sans-serif;
+}

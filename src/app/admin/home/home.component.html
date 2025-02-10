@@ -1,0 +1,47 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidebar mode="side" opened="">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <div class="toolbar">
+        <mat-toolbar>
+          <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+          <div class="box">
+            <button *ngIf="!currentUser" mat-icon-button [routerLink]="['/login']" matTooltip="Login">
+              <i class="fa fa-sign-in fa-lg " aria-hidden="true" style="color: gray;"></i>
+            </button>
+            <button *ngIf="!currentUser" mat-icon-button [routerLink]="['/register']" matTooltip="Register">
+              <i class="fas fa-user-plus me-2 " style="color: gray;"></i>
+            </button>
+
+            <!-- Dropdown for logged in users -->
+            <div *ngIf="currentUser" class="dropdown" dropdown>
+              <button mat-button dropdownToggle class="text-light">
+                <span style="color: gray;">Welcome  <b>{{currentUser.username}}</b>  </span>
+                <mat-icon>arrow_drop_down</mat-icon>
+              </button>
+              <div class="dropdown-menu" *dropdownMenu>
+                <a href="#" class="dropdown-item">
+                  <i class="fas fa-tachometer-alt"></i> View Dashboard
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="far fa-user-circle"></i> My Profile
+                </a>
+                <a href="#" class="dropdown-item">
+                  <i class="fas fa-key"></i> Change Password
+                </a>
+                <button (click)="onLogout()" class="dropdown-item">
+                  <i class="fas fa-sign-out-alt fa-lg"></i> Logout
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-toolbar>
+      </div>
+      <div class="main">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

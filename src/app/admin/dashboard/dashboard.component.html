@@ -1,0 +1,64 @@
+<div class="top-section">
+
+</div>
+<div class="widget-container">
+  <div class="widget green">
+    <div class="icon" style="margin-bottom: 5%">
+      <i class="fa fa-spinner" aria-hidden="true"></i>
+    </div>
+    <div class="value">
+      <div class="top" style="margin-bottom: 5%">
+        {{ UsersStats?.taskCountsByStatus?.ToDo !== undefined ? UsersStats?.taskCountsByStatus?.ToDo : 0 }}
+      </div>
+      <div class="bottom">To Do</div>
+    </div>
+  </div>
+  <div class="widget yellow">
+    <div class="icon" style="margin-bottom: 5%">
+      <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+    </div>
+    <div class="value">
+      <div class="top" style="margin-bottom: 5%">
+        {{ UsersStats?.taskCountsByStatus?.InProgress !== undefined ? UsersStats?.taskCountsByStatus?.InProgress : 0 }}
+      </div>
+      <div class="bottom">In Progress </div>
+    </div>
+  </div>
+  <div class="widget red">
+    <div class="icon" style="margin-bottom: 5%">
+      <i class="fa fa-circle-o" aria-hidden="true"></i>
+    </div>
+    <div class="value">
+      <div class="top" style="margin-bottom: 5%">
+        {{ UsersStats?.taskCountsByStatus?.ToConfirmOrBug !== undefined ? UsersStats?.taskCountsByStatus?.ToConfirmOrBug : 0 }}
+      </div>
+      <div class="bottom">To Confirm</div>
+    </div>
+  </div>
+  <div class="widget blue">
+    <div class="icon" style="margin-bottom: 5%">
+      <i class="fa fa-clock-o" aria-hidden="true"></i>
+    </div>
+    <div class="value">
+      <div class="top" style="margin-bottom: 5%">
+        {{ UsersStats?.taskCountsByStatus?.Finished !== undefined ? UsersStats?.taskCountsByStatus?.Finished : 0 }}
+      </div>      <div class="bottom">Finished</div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="middle-section">
+  <div class="widget left">
+    <app-task-activity></app-task-activity>
+  </div>
+  <div class="widget right">
+    <app-project-category></app-project-category>
+  </div>
+</div>
+<div class="bottom-section">
+  <div class="widget">
+    <app-column-chart></app-column-chart>
+  </div>
+</div>
+

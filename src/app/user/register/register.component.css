@@ -1,0 +1,54 @@
+/* You can add this in your styles.css or register.component.css */
+.bg-military {
+  background: linear-gradient(to right, #73c8a9, #373b44);
+}
+
+.text-white {
+  color: white;
+  text-align: center;
+}
+
+.has-icon label {
+  display: flex;
+  align-items: center;
+  color: #73c8a9;
+}
+
+.has-icon i {
+  margin-right: 8px;
+}
+
+.card.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+}
+.form-group {
+  margin-bottom: 1.5rem; /* Spacing between form groups */
+}
+.error-block {
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+.btn-success {
+  background:#73c8a9;
+  border-color:  #73c8a9;
+}
+
+.btn-success:hover {
+  background-color:   #73c8a9;
+  border-color: #73c8a9;
+}
+
+.btn-outline-secondary {
+  border-color:  #73c8a9;
+}
+
+.btn-outline-secondary:hover {
+  background-color:  #73c8a9;
+  color: white;
+}

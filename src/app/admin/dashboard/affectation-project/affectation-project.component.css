@@ -1,0 +1,58 @@
+.affectation-container {
+  padding: 20px;
+  background-color: #a8deb4;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-card {
+  margin-bottom: 20px;
+}
+
+mat-card-header {
+  background-color: #a8deb4;
+  padding: 16px;
+  border-radius: 4px 4px 0 0;
+}
+
+.input-group {
+  display: flex;
+  align-items: baseline; /* Align items at the baseline */
+  justify-content: center;
+  width: 40%;
+}
+
+.input-field {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.full-width {
+  width: calc(100% - 120px);
+}
+
+button[type="submit"] {
+  height: auto;
+}
+
+
+.table-container {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+mat-header-cell {
+  background-color: #a8deb4;
+  font-weight: bold;
+}
+
+mat-cell {
+  background-color: #a8deb4;
+}

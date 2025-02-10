@@ -1,0 +1,91 @@
+/* Overall layout and card styling */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Full height to center vertically */
+}
+
+.card {
+  width: 100%;
+  max-width: 500px; /* Maximum width of the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.card-header {
+  background: linear-gradient(to right, #73c8a9, #373b44);/* Military green background */
+  color: #ffffff; /* White text color for contrast */
+  font-size: 1.5rem; /* Larger text for the header */
+  padding: 1rem; /* Padding for aesthetic spacing */
+  text-align: center; /* Center the title */
+}
+
+.card-body {
+  padding: 2rem; /* Padding inside the card body */
+}
+
+/* Form and input styling */
+.form-group {
+  margin-bottom: 1.5rem; /* Spacing between form groups */
+}
+.has-icon label {
+  display: flex;
+
+  color: #73c8a9;
+}
+.has-icon i {
+  margin-right: 8px;
+  color: #73c8a9;
+}
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  height: 40px; /* Fixed height for cleaner design */
+}
+
+input.form-control {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); /* Inner shadow for depth */
+}
+
+/* Button styling */
+button.btn {
+  padding: 0.5rem 1rem; /* Padding for buttons */
+  border-radius: 0.25rem; /* Rounded corners for buttons */
+  font-size: 1rem; /* Button text size */
+  font-weight: 500; /* Medium font weight for button text */
+  letter-spacing: 0.05rem; /* Spacing between letters */
+}
+
+.btn-primary {
+  background-color:#73c8a9; /* Military green background for primary button */
+  border-color: #73c8a9; /* Matching border color */
+}
+
+.btn-primary:hover {
+  background-color: #73c8a9; /* Darker shade on hover */
+  border-color: #73c8a9;
+}
+
+.btn-secondary {
+  background-color: #ffffff; /* White background for secondary button */
+  color: #333333; /* Dark text for readability */
+  border-color: #cccccc; /* Light gray border */
+}
+
+.btn-secondary:hover {
+  background-color: #f8f9fa; /* Slightly darker background on hover */
+}
+
+/* Enhance focus state for better accessibility */
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .card {
+      margin: 1rem; /* Smaller margin on smaller screens */
+  }
+}

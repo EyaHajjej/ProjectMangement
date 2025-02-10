@@ -1,0 +1,27 @@
+<mat-dialog-content>
+  <h2>Add Project</h2>
+  <form (ngSubmit)="onSubmit(projectForm.value)" #projectForm="ngForm" class="form-container">
+    <div class="form-row">
+      <mat-form-field>
+        <input matInput placeholder="Name" name="name" ngModel required>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <textarea matInput placeholder="Description" name="description" ngModel required></textarea>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <input matInput type="date" placeholder="Start Date" name="startDate" ngModel required>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <input matInput type="date" placeholder="End Date" name="endDate" ngModel required>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!projectForm.valid">Add</button>
+  </form>
+</mat-dialog-content>
+

@@ -1,0 +1,41 @@
+<br>
+<br>
+<div class="row">
+  <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">
+        Register
+      </div>
+      <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+          <div class="form-group col-12">
+            <label><i class="fas fa-user" style="color: #73c8a9;"></i> Username</label>
+            <input placeholder="username" class="form-control" formControlName="username" required>
+          </div>
+
+          <div class="form-group col-12">
+            <label><i class="fas fa-envelope" style="color: #73c8a9;"></i> Email</label>
+            <input placeholder="email" class="form-control" formControlName="email" required>
+          </div>
+
+          <div class="form-group col-12">
+            <label><i class="fas fa-lock" style="color: #73c8a9;"></i> Password</label>
+            <input placeholder="password" type="password" class="form-control" formControlName="password" required>
+          </div>
+
+          <div class="form-group col-12">
+            <label><i class="fas fa-user-tag" style="color: #73c8a9;"></i> Role</label>
+            <select class="form-control" formControlName="role" required>
+              <option *ngFor="let role of roles" [value]="role.name">{{ role.name }}</option>
+            </select>
+          </div>
+
+          <div class="form-group col-12">
+            <button [disabled]="!registerForm.valid" type="submit" class="btn btn-primary me-2">Register</button>
+            <button type="button" class="btn btn-secondary ml-2">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

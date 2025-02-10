@@ -1,0 +1,10 @@
+.chart-container {
+  padding: 20px;
+}
+.title
+{
+  font-family: "Dancing Script", "cursive";
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}

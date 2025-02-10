@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>{{ isEditEnabled ? 'Update Task' : 'Add New Task' }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="taskForm">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Task Name</mat-label>
+      <input formControlName="name" matInput placeholder="Task Name">
+      <mat-hint>Enter task name</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Task Description</mat-label>
+      <textarea formControlName="description" matInput placeholder="Task Description" rows="4"></textarea>
+      <mat-hint>Enter task description</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Deadline</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="endDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="warn" (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="taskForm.invalid">
+    {{ isEditEnabled ? 'Update' : 'Add' }}
+  </button>
+</div>

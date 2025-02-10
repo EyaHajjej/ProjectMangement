@@ -1,0 +1,40 @@
+[{
+  "Id":1,
+  "Name": "Project Mangers",
+  "Email":"med@gmail.com",
+  "Password":"string",
+  "Role":"Project Manager",
+  "Image": "designer-1"
+
+   },
+
+   {
+    "Id":2,
+    "Name": "Frontend",
+    "Email":"med@gmail.com",
+    "Password":"string",
+    "Role":"Project Manager",
+    "Image": "designer-1"
+
+     },
+     {
+      "Id":3,
+      "Name": "backend ",
+      "Email":"med@gmail.com",
+      "Password":"string",
+      "Role":"Project Manager",
+      "Image": "designer-1"
+
+       },
+       {
+        "Id":4,
+        "Name": "Designer UI/UX",
+        "Email":"med@gmail.com",
+        "Password":"string",
+        "Role":"Project Manager",
+        "Image": "designer-1"
+
+         }
+
+
+  ]

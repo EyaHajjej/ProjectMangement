@@ -1,0 +1,25 @@
+<div class="navbar">
+  <div class="sidebar-title">
+    <img src="assets/images/vectors/ByAyou.png" alt="By Ayou Logo">
+  </div>
+  <div class="menu">
+    <div class="menu-item">
+      <button mat-button class="menu-button" [routerLink]="['/dashboard']">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </button>
+      <button mat-button class="menu-button" [routerLink]="['/projects']">
+        <mat-icon>data_usage</mat-icon>
+        <span>Projects</span>
+      </button>
+    <!--  <button mat-button class="menu-button" [routerLink]="['/tasks']">
+        <mat-icon>tasks</mat-icon>
+        <span>Tasks</span>
+      </button>-->
+      <button mat-button class="menu-button" [routerLink]="['/teams']">
+        <mat-icon>people</mat-icon>
+        <span>Team</span>
+      </button>
+    </div>
+  </div>
+</div>

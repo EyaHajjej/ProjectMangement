@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.mat-icon {
+  font-family: 'Material Icons';
+}
+
+mat-icon {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 22px;
+  vertical-align: middle; /* Ensure icons align with text */
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center; /* Center the logo vertically */
+  padding: 20px 0; /* Add padding around the logo */
+  font-weight: bold;
+}
+
+.sidebar-title img {
+  max-width: 100%; /* Ensure the logo doesn't overflow its container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.menu-item {
+  width: 100%;
+}
+
+.menu-item button.menu-button {
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center align items */
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item button.menu-button span {
+  margin-left: 15px;
+
+}
+
+.menu-item button.menu-button:hover,
+.menu-item button.menu-button:focus {
+  background-color: #68AF97;
+  color: #ffffff;
+}

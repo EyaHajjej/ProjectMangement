@@ -1,0 +1,15 @@
+.full-width {
+  width: 100%;
+}
+
+.mat-form-field {
+  margin-bottom: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.mat-dialog-actions {
+  justify-content: flex-end;
+}

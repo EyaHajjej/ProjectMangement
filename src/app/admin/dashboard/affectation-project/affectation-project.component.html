@@ -1,0 +1,70 @@
+<br>
+<mat-toolbar>
+  <span>Assign Users to Project</span>
+  <button mat-button color="primary" (click)="backToProjects()">Back to Projects</button>
+</mat-toolbar>
+
+<div class="affectation-container">
+  <mat-card>
+    <mat-card-header style="background-color: white">
+      <mat-card-title>{{project?.name}}</mat-card-title>
+      <mat-card-subtitle>{{project?.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="projectForm" (ngSubmit)="assignUser()" class="assign-form">
+        <div class="input-group">
+          <mat-form-field appearance="fill" class="input-field">
+            <mat-label>Username</mat-label>
+            <mat-select formControlName="userId" (selectionChange)="onUserSelectionChange($event)">
+              <mat-option *ngFor="let user of users_forAffect" [value]="user.userId">{{user.username}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" [disabled]="projectForm.invalid">Assign User</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <br>
+  <mat-toolbar>
+    <span>Users Affected</span>
+  </mat-toolbar>
+  <div class="table-container">
+    <table mat-table [dataSource]="users" class="mat-elevation-z8 mat-table">
+      <!-- User ID Column -->
+      <ng-container matColumnDef="userId">
+        <th mat-header-cell *matHeaderCellDef> User ID </th>
+        <td mat-cell *matCellDef="let user"> {{user.userId}} </td>
+      </ng-container>
+
+      <!-- Username Column -->
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Username </th>
+        <td mat-cell *matCellDef="let user"> {{user.username}} </td>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let user"> {{user.email}} </td>
+      </ng-container>
+
+      <!-- Role Column -->
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef> Role </th>
+        <td mat-cell *matCellDef="let user"> {{user.role}} </td>
+      </ng-container>
+
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let user">
+          <button mat-button style="background-color: rgba(255,0,0,0.77);color: white" (click)="unassignUser(user.userId)">Unassign</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
